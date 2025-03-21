@@ -1,0 +1,88 @@
+body {
+    overflow-x: hidden;
+    padding-bottom: 4%;
+}
+
+.navbar-nav {
+    margin-left: 18%;
+}
+.nav-link {
+    color: rgb(224, 243, 223);
+    transition: color 0.3s ease;
+}
+
+/*On Hover */
+.nav-link:hover {
+    color: rgb(231, 207, 71);
+    text-decoration: none;
+}
+
+.nav-link:active {
+    color: rgb(253, 255, 162);
+}
+
+
+.navbar-brand {
+    color: white;
+}
+
+.container-fluid {
+    background-color: rgb(52, 133, 20);
+    margin-top: -0.8%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    
+}
+
+#bar {
+    margin-right: 0.75rem; /* Minove ko yung search button ng onti :D - Sharlene */
+  }
+
+  /*FEU DILIMAN Text - shar */
+
+  .feu-text {
+    color: rgb(228, 227, 227);
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+
+#search {
+    background-color: rgb(24, 80, 35);
+    color: rgb(135, 196, 123);
+    border-color: rgb(78, 167, 51);
+    border-width: 2px;
+}
+
+#search-container {
+    margin-left: 20%;
+}
+
+#search:hover {
+    color: rgb(208, 241, 208);
+}
+
+#search:active {
+    color: rgb(14, 39, 14);
+}
+
+.card {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+/*Hero Section - shar*/
+section.text-center.p-5 {
+    color: black !important;
+    background-color: #f6fbf6 !important; /* fallback in case image fails */
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 8px rgba(244, 242, 242, 0.5);
+}

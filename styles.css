@@ -146,9 +146,8 @@ section.text-center.p-5 {
     font-weight: 500;
 }
 
-@media(max-width: 415px) {
-    .card {
-        width: 68%;
-        margin-left: 15%;
+@media(max-width: 1310px) {
+    .navbar-nav {
+        margin-left: 1%;
     }
 }

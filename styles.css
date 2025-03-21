@@ -149,5 +149,12 @@ section.text-center.p-5 {
 @media(max-width: 1310px) {
     .navbar-nav {
         margin-left: 1%;
+        
+    }
+}
+
+@media(max-width: 415px) {
+    .card {
+        margin-left: 15%;
     }
 }

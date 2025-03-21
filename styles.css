@@ -146,7 +146,7 @@ section.text-center.p-5 {
     font-weight: 500;
 }
 
-@media(max-width: 1310px) {
+@media(max-width: 1350px) {
     .navbar-nav {
         margin-left: 1%;
         

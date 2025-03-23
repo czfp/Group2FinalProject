@@ -8,57 +8,51 @@ body {
     padding-bottom: 4%;
 }
 
-/* Nav Bar */
+/* Navbar */
 .navbar {
-  margin-bottom: 0;
-  padding-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0; 
 }
 
 .navbar-nav {
-  margin-left: 9%;
+    margin-left: 9%;
 }
-
 .nav-link {
-  color: rgb(224, 243, 223);
-  transition: color 0.3s ease;
+    color: rgb(224, 243, 223);
+    transition: color 0.3s ease;
 }
 
-/* On Hover */
+
+/*On Hover */
 .nav-link:hover {
-  color: rgb(231, 207, 71);
-  text-decoration: none;
+    color: rgb(231, 207, 71);
+    text-decoration: none;
 }
 
 .nav-link:active {
-  color: rgb(253, 255, 162);
+    color: rgb(253, 255, 162);
 }
 
+
 .navbar-brand {
-  color: white;
+    color: white;
 }
 
 .container-fluid {
-  background-color: rgb(52, 133, 20);
-  margin-top: -0.8%;
-  font-family: "Montserrat", sans-serif !important;
-  font-weight: 500;
-  padding-right: 1rem; 
-}
+    background-color: rgb(52, 133, 20);
+    margin-top: -0.8%;
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 500;
+    padding-right: 1rem; 
+  }
 
 #bar {
-  margin-right: 0.75rem;
-}
+    margin-right: 0.75rem;
+  }
 
+ /*FEU DILIMAN Text */
 
-#search {
-  margin-left: 0.5rem;
-}
-
-
-
-  /*FEU DILIMAN Text */
-
-  .feu-text {
+ .feu-text {
     color: rgb(228, 227, 227);
     margin-left: 1rem;
     font-weight: bold;
@@ -68,8 +62,9 @@ body {
     align-items: center;
 }
 
-
+/*search button*/
 #search {
+    margin-left: 0.5rem;
     background-color: rgb(24, 80, 35);
     color: rgb(135, 196, 123);
     border-color: rgb(78, 167, 51);
@@ -87,6 +82,28 @@ body {
 #search:active {
     color: rgb(14, 39, 14);
 }
+
+.result-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .result-item:hover {
+    background-color: #f0f0f0;
+  }
+
+    content {
+    display: none;
+  }
+
+  .highlight {
+    background-color: yellow;
+    font-weight: bold;
+  }
+
 
 .card {
     display: flex;
@@ -129,6 +146,7 @@ body {
     margin: 0 auto;
     font-weight: 500;
 }
+
 
 /*Hero Section*/
 section.text-center.p-5 {
@@ -339,98 +357,99 @@ body, html {
 
   /* Organizations Section */
 #organizations {
-  background-color: #ffffff;
-}
-
-#organizations .section-icon {
-  font-size: 3rem;
-  color: #198754;
-  margin-bottom: 0.5rem;
-}
-
-#organizations h2 {
-  font-size: 2.5rem;
-  color: #2d2d2d;
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-weight: 1000;
-}
-
-#organizations p {
-  font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+    background-color: #ffffff;
+  }
+  
+  #organizations .section-icon {
+    font-size: 3rem;
+    color: #198754;
+    margin-bottom: 0.5rem;
+  }
+  
+  #organizations h2 {
+    font-size: 2.5rem;
+    color: #2d2d2d;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-weight: 1000;
+  }
+  
+  #organizations p {
+    font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 500;
+  }
+  
+  #organizations .card {
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 15px;
+    height: 100%;
+  }
+  
+  #organizations .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  #organizations .card-img-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #organizations .card-body {
+    padding: 1.25rem;
+  }
+  
+  #organizations .card-title {
+    color: #198754;
+    font-size: 1.25rem;
+  }
+  
+  #organizations .card-text {
+    font-size: 0.95rem;
+    color: #6c757d;
+  }
+  
+  #organizations .org-img-wrapper {
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  #organizations .org-img-wrapper:hover .card-img-top {
+    transform: scale(1.05); 
+  }
+  
+  #organizations .card-img-top {
+    transition: transform 0.3s ease-in-out;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  #organizations .org-img-wrapper:hover .card-img-top {
+    transform: scale(1.05);
+  }
+  
+  #organizations .badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 50px;
     font-weight: 500;
-}
-
-#organizations .card {
-  border: none;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border-radius: 15px;
-  height: 100%;
-}
-
-#organizations .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-#organizations .card-img-top {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 180px;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-#organizations .card-body {
-  padding: 1.25rem;
-}
-
-#organizations .card-title {
-  color: #198754;
-  font-size: 1.25rem;
-}
-
-#organizations .card-text {
-  font-size: 0.95rem;
-  color: #6c757d;
-}
-
-#organizations .org-img-wrapper {
-  overflow: hidden;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-#organizations .org-img-wrapper:hover .card-img-top {
-  transform: scale(1.05); 
-}
-
-#organizations .card-img-top {
-  transition: transform 0.3s ease-in-out;
-  height: 180px;
-  object-fit: cover;
-}
-
-#organizations .org-img-wrapper:hover .card-img-top {
-  transform: scale(1.05);
-}
-
-#organizations .badge {
-  font-size: 0.75rem;
-  padding: 0.35rem 0.6rem;
-  border-radius: 50px;
-  font-weight: 500;
-  width: fit-content;
-}
-
-#organizations .card-title i {
-  font-size: 1rem;
-  color: inherit;
-}
+    width: fit-content;
+  }
+  
+  #organizations .card-title i {
+    font-size: 1rem;
+    color: inherit;
+  }
+  
 
 /* Button Styling */
 #organizations .btn {
@@ -453,153 +472,238 @@ body, html {
 
 /*Contact Us Section*/
 #contact {
-  background-color: #ffffff !important;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-#contact .section-icon {
-  font-size: 3rem;
-  color: #28a745; 
-}
-
-#contact p {
-  font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    font-weight: 500;
-}
-
-#contact .form-label {
-  font-weight: bold;
-  color: #495057; 
-}
-
-#contact .form-control {
-  border-radius: 0.375rem;
-  border: 1px solid #ced4da; 
-}
-
-#contact .form-control:focus {
-  border-color: #124a1f; 
-  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25); 
-}
-
-#contact button {
-  background-color: #28a745; 
-  border: none;
-  padding: 12px;
-  border-radius: 0.375rem; 
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#contact button:hover {
-  background-color: #1b6e2d; 
-}
-
-#contact .form-control, #contact button {
-  transition: all 0.3s ease; 
-}
-
-
-/* Contact Info and Social Media */
-#contact .col-md-4 {
-  margin-bottom: 30px;
-}
-
-#contact h4 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #28a745;
-  margin-bottom: 20px;
-}
-
-#contact ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-#contact ul li {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-#contact ul li a {
-  color: #28a745;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-#contact ul li a:hover {
-  color: #1b6e2d;
-}
-
-/* Social Media Icons */
-#contact .bi {
-  font-size: 1.8rem; 
-  color: #28a745;
-  margin-right: 15px; 
-  transition: color 0.3s ease;
-}
-
-#contact .bi:hover {
-  color: #1b6e2d;
-}
-
-#contact .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-#contact .social-icons a {
-  margin-right: 20px;
-}
-
-#contact .social-icons a:last-child {
-  margin-right: 0;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+    background-color: #ffffff !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  #contact .section-icon {
+    font-size: 3rem;
+    color: #28a745; 
+  }
+  
+  #contact p {
+    font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 500;
+  }
+  
+  #contact .form-label {
+    font-weight: bold;
+    color: #495057; 
+  }
+  
+  #contact .form-control {
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da; 
+  }
+  
+  #contact .form-control:focus {
+    border-color: #124a1f; 
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25); 
+  }
+  
+  #contact button {
+    background-color: #28a745; 
+    border: none;
+    padding: 12px;
+    border-radius: 0.375rem; 
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #contact button:hover {
+    background-color: #1b6e2d; 
+  }
+  
+  #contact .form-control, #contact button {
+    transition: all 0.3s ease; 
+  }
+  
+  
+  /* Contact Info and Social Media */
   #contact .col-md-4 {
+    margin-bottom: 30px;
+  }
+  
+  #contact h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
     margin-bottom: 20px;
   }
-
-  #contact .form-label, #contact button {
+  
+  #contact ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  #contact ul li {
     font-size: 1.1rem;
-  }
-
-  #contact p {
-    font-size: 1.1rem;
-  }
-
-  #contact .section-icon {
-    font-size: 2.5rem;
-  }
-
-  #contact .social-icons {
-    flex-direction: column;
-  }
-
-  #contact .social-icons a {
+    color: #555;
     margin-bottom: 10px;
   }
-}
-
-
-@media (max-width: 768px) {
-  #contact .container {
-    padding-left: 15px;
-    padding-right: 15px;
+  
+  #contact ul li a {
+    color: #28a745;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
-}
+  
+  #contact ul li a:hover {
+    color: #1b6e2d;
+  }
+  
+  /* Social Media Icons */
+  #contact .bi {
+    font-size: 1.8rem; 
+    color: #28a745;
+    margin-right: 15px; 
+    transition: color 0.3s ease;
+  }
+  
+  #contact .bi:hover {
+    color: #1b6e2d;
+  }
+  
+  #contact .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #contact .social-icons a {
+    margin-right: 20px;
+  }
+  
+  #contact .social-icons a:last-child {
+    margin-right: 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    #contact .col-md-4 {
+      margin-bottom: 20px;
+    }
+  
+    #contact .form-label, #contact button {
+      font-size: 1.1rem;
+    }
+  
+    #contact p {
+      font-size: 1.1rem;
+    }
+  
+    #contact .section-icon {
+      font-size: 2.5rem;
+    }
+  
+    #contact .social-icons {
+      flex-direction: column;
+    }
+  
+    #contact .social-icons a {
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    #contact .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+     
+    /* Font for FEU Diliman */
+  @font-face {
+    font-family: 'Della Robbia Bold';
+    src: url('assets/DellaRobbiaBold.otf') format('opentype'),
+  }
+  
+  
+  @media(max-width: 1500px) {
+      .navbar-nav {
+          margin-left: 1%;
+          
+      }
+  }
+  
+  @media(max-width: 850px) {
+      .card {
+          width: 75%;
+          margin-left: 13.5%;
+      }
+  }
+  
+  /* Mobile: up to 767px */
+  @media (max-width: 767px) {
+    .navbar-nav {
+        margin-left: 5%;
+    }
+    
+    .card {
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .container-fluid {
+        margin-top: 0;
+    }
+    
+    #search-container {
+        margin-left: 5%;
+    }
+    #home h2 {
+        font-size: 2rem;
+    }
+    #home p {
+        font-size: 1rem;
+    }
+    
+    #about h2, #initiatives h2, #organizations h2 {
+        font-size: 2rem;
+    }
+  }
+  
+  /* Tablet: 768px to 991px */
+  @media (max-width: 991px) {
+    .navbar-nav {
+        margin-left: 6%;
+    }
+    
+    .card {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    #home h2 {
+        font-size: 2.2rem;
+    }
+    #home p {
+        font-size: 1.1rem;
+    }
+    
+    #about h2, #initiatives h2, #organizations h2 {
+        font-size: 2.2rem;
+    }
+  }
+  
+  /* Large Desktop: 1500px and up */
+  @media (min-width: 1500px) {
+    .navbar-nav {
+        margin-left: 10%;
+    }
+    
+    .card {
+        margin-left: 20%;
+    }
+  }
    
   /* Font for FEU Diliman */
 @font-face {
@@ -675,13 +779,26 @@ body, html {
   }
 }
 
-/* Large Desktop: 1500px and up */
-@media (min-width: 1500px) {
-  .navbar-nav {
-      margin-left: 10%;
+/* Gold Gradient Style */
+.gold-text {
+    background: linear-gradient(45deg, #fdda12, #c9930c);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent; 
+    font-weight: bold;
+}
+
+.gold-text-large {
+    font-size: 2rem;
+}
+
+/*learn more button*/
+.btn-gold {
+    background-color: rgb(60, 211, 55);
+    color: black;
   }
   
-  .card {
-      margin-left: 20%;
-  }
-}
+  .btn-gold:hover {
+    background-color: #b7950b; 
+    color: white;
+  }  

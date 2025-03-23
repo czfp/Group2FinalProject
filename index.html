@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
+
 <!--Bootstrap Icon-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
@@ -42,7 +43,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto row-cols-xl-3">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#home">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">About Us</a>
@@ -68,78 +69,157 @@
         </div>
       </nav>
 
-      <!--Hero Section *shar-->
-      <section class="hero section text-center p-5">
-        <div class="container">
-          <h1 class="display-4 fw-bold">FEU Diliman Student Activities</h1>
-          <p class="lead">Empowering Tamaraws through Leadership, Excellence, and Purpose.</p>
-        </div>
-      </section>
+            <!-- Hero Section with Smooth Background Slideshow -->
+             <section class="hero-slider text-white text-center d-flex align-items-center justify-content-center position-relative p-5">
+              <!-- Background slides -->
+               <div class="slide"></div>
+               <div class="slide"></div>
+               <div class="slide"></div>
+               <div class="overlay"></div>
+               
+               <!-- Hero content -->
+                 <div class="container position-relative z-1">
+                  <h1 class="display-4 fw-bold">FEU Diliman Student Activities</h1>
+                  <p class="lead">Empowering Tamaraws through Leadership, Excellence, and Purpose.</p>
+                </div>
+              </section>
+      
+            <!--Home Section //Core Values -->
+            <section id="home" class="py-5 bg-light text-center">
+              <div class="container">
+                <div class="mb-5">
+                  <h2 class="fw-bold text-success">Core Values</h2>
+                </div>
 
-      <!--About Section *shar-->
-      <section id="about" class="py-5 bg-light text-center">
-        <div class="container">
-          <div class="mb-4">
-            <i class="bi bi-people-fill section-icon"></i>
-            <h2 class="fw-bold text-success">About Us</h2>
-          </div>
-          <p class="lead">
-            The Student Activities and Development Department oversees student-led initiatives 
-            that promote leadership, creativity, and excellence. We ensure proper coordination 
-            between student organizations and their advisers for efficient activity planning and execution.
-          </p> 
-        </div>
-      </section>
+                <p class="lead">
+                <strong>SERVE</strong><br>
+                The Student Activities and Development Unit focuses on cultivating a community of leaders who are passionate, proactive, innovative, and dedicated to serving others.
+                With this in mind, every student leader is encouraged to embrace the belief that giving is more valuable than receiving—a principle that forms the foundation of leadership.
+                </p> 
+
+              <p class="lead mt-4"><br>
+                <strong>LEAD</strong><br>
+                The Student Activities and Development Unit strives to develop student leaders who are not only good followers but also confident decision-makers who take initiative in every situation they encounter. 
+                Through comprehensive training programs, student leaders are equipped with the skills needed to face real-life challenges and lead effectively.
+              </p> 
+
+              <p class="lead mt-4"><br>
+                <strong>EXCEL</strong><br>
+                Excellence is a fundamental value that FEU Diliman student leaders are expected to embody in both their academic and personal lives. 
+                This commitment to excellence is a defining trait of every iTamaraw. The Student Activities and Development Unit supports this pursuit of excellence by offering a variety of training programs and developmental activities that prepare student leaders to succeed in every aspect of life.
+              </p> 
+              
+              </div>
+            </section>
+      
+            <!--About Section *shar-->
+            <section id="about" class="py-5 bg-light text-center">
+              <div class="container">
+                <div class="mb-4">
+                  <i class="bi bi-people-fill section-icon"></i>
+                  <h2 class="fw-bold text-success">About Us</h2>
+                </div>
+                <p class="lead">
+                  The Student Activities and Development Unit oversees student-led initiatives 
+                  that promote leadership, creativity, and excellence. We ensure proper coordination 
+                  between student organizations and their advisers for efficient activity planning and execution.
+                </p> 
+              </div>
+            </section>      
 
       <h1></h1>
-      <!-- Card for Achievements -->
-      <div class="row row-cols-1 row-cols-md-2 g-2">
-        <div class="col">
-          <div class="card d-flex flex-column">
-            <img src="pic1.jpg" class="img-fluid card-img-top" alt="pic1.jpg">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">𝐁𝐈𝐍𝐇𝐈 𝟐𝟎𝟐𝟓 – 𝐂𝐮𝐥𝐭𝐢𝐯𝐚𝐭𝐢𝐧𝐠 𝐭𝐡𝐞 𝐋𝐞𝐚𝐝𝐞𝐫𝐬 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐅𝐄𝐔𝐓𝐔𝐑𝐄</h5>
-              <p class="card-text">The much-anticipated 𝐁𝐈𝐍𝐇𝐈 𝟐𝟎𝟐𝟓 is now in full swing at the 𝐅𝐄𝐔 𝐓𝐞𝐜𝐡 𝐆𝐲𝐦𝐧𝐚𝐬𝐢𝐮𝐦!
-                This prestigious leadership congress brings together dynamic and passionate student leaders.
-                #FEUDiliman #BINHI2025 #TSCC</p>
-            </div>
-          </div>
-        </div>
+      <!-- Achievements Section -->
+<section id="achievements" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <i class="bi bi-award-fill section-icon text-success"></i>
+      <h2 class="fw-bold text-success">Achievements</h2>
+      <p class="text-muted">Celebrating the milestones of FEU Diliman student initiatives.</p>
+    </div>
 
-        <div class="col">
-          <div class="card d-flex flex-column">
-            <img src="pic2.jpg" class="img-fluid card-img-top" alt="pic2.jpg">
-            <div class="card-body d-flex flex-column"> 
-              <h5 class="card-title">𝐇𝐚𝐧𝐝𝐨𝐠 𝐊𝐊𝐊: 𝐃𝐚𝐲 𝟐</h5>
-              <p class="card-text">The energy is unstoppable as we dive into another exciting day of learning, growth, and inspiration!
-                Get ready for more engaging sessions, fresh insights, and unforgettable moments.
-                #FEUDiliman #TSCC #HandogKKK</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card d-flex flex-column">
-            <img src="pic3.jpg" class="img-fluid card-img-top" alt="pic3.jpg">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">One-on-One Meeting</h5>
-              <p class="card-text">The Student Activities and Development Unit (SADU) conducted a one-on-one meeting with Recognized Student Organizations (RSOs) on December 13 and 16, 2024, in Room H415 of the New Building at FEU Diliman.
-                #One-on-OneMeeting #TSCC #FEUDiliman</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card d-flex flex-column">
-            <img src="pic4.jpg" class="img-fluid card-img-top" alt="pic4.jpg">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Blood Donation Drive 2024</h5>
-              <p class="card-text">Partnering with Red Cross Philippines, we made a significant impact and saved many lives. Relive the highlights from today’s event in our photo compilation!
-                #BloodDonationDrive2024 #TSCC #FEUDiliman</p>
-            </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="pic1.jpg" class="card-img-top" alt="BINHI 2025">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">𝐁𝐈𝐍𝐇𝐈 𝟐𝟎𝟐𝟓 – Cultivating the Leaders for the FEUTURE</h5>
+            <p class="card-text text-muted">
+              BINHI 2025 is now in full swing at the FEU Tech Gymnasium!
+              This prestigious leadership congress brings together dynamic and passionate student leaders.
+              #FEUDiliman #BINHI2025 #TSCC
+            </p>
           </div>
         </div>
       </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="pic2.jpg" class="card-img-top" alt="Handog KKK: Day 2">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">𝐇𝐚𝐧𝐝𝐨𝐠 𝐊𝐊𝐊: 𝐃𝐚𝐲 𝟐</h5>
+            <p class="card-text text-muted">
+              The energy is unstoppable as we dive into another exciting day of learning, growth, and inspiration!
+              #FEUDiliman #TSCC #HandogKKK
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="pic3.jpg" class="card-img-top" alt="One-on-One Meeting">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">One-on-One Meeting</h5>
+            <p class="card-text text-muted">
+              SADU conducted one-on-one meetings with RSOs on December 13 and 16, 2024, in Room H415 of the New Building.
+              #OneOnOneMeeting #TSCC #FEUDiliman
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="pic4.jpg" class="card-img-top" alt="Blood Donation Drive">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Blood Donation Drive 2024</h5>
+            <p class="card-text text-muted">
+              Partnering with Red Cross Philippines, we made a significant impact. Relive the highlights in our photo compilation!
+              #BloodDonationDrive2024 #TSCC #FEUDiliman
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-dark-green text-white text-center py-3 mt-5">
+  <div class="container">
+    <p class="mb-1 fw-bold">FEU Diliman - Student Activities & Development Unit</p>
+    <p class="mb-2 small">Empowering Tamaraws through Leadership, Excellence, and Purpose.</p>
+    
+    <div class="d-flex justify-content-center gap-3 mb-3">
+      <!-- Phone icon -->
+      <a href="tel:+63289900430" class="text-white" title="Call us">
+        <i class="bi bi-telephone-fill fs-5"></i>
+      </a>
+
+      <!-- Email icon -->
+      <a href="mailto:sadu@feudiliman.edu.ph" class="text-white" title="Email us">
+        <i class="bi bi-envelope-fill fs-5"></i>
+      </a>
+    </div>
+
+    <small class="d-block">&copy; 2025 FEU Diliman. All rights reserved.</small>
+  </div>
+</footer>
+
 
       
 </body>

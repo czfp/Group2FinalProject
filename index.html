@@ -7,9 +7,10 @@
     <link rel = "stylesheet" href = "styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
-<!-- AOS CSS -->
+<!--AOS CSS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <!--Bootstrap Icon-->
@@ -61,15 +62,48 @@
             </ul>
 
             <!-- Search Bar -->
-            <div class="d-flex" id="search-container">
-                <div class="d-flex" role="search">
-                    <input id="bar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button id="search" class="btn btn-outline-success" type="button">Search</button>
-                </div>
+            <div class="d-flex ms-auto" id="search-container">
+              <div class="d-flex ms-auto" role="search">
+                <input id="bar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="search" class="btn btn-outline-success" type="button" onclick="searchPage()">Search</button>
+              </div>
             </div>
-        </div>
-    </div>
-</nav>
+
+            <!-- Search Results Modal -->
+            <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Search Results</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" id="search-results">
+                    <!-- Search results will be displayed here -->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hidden Content to Search -->
+            <section id="content" style="display: none;">
+              <h2>BINHI 2025 – Cultivating the Leaders for the FEUTURE</h2>
+              <p>BINHI 2025 is a prestigious leadership congress at FEU Tech.</p>
+
+              <h2>Handog KKK: Day 2</h2>
+              <p>The energy is unstoppable as we dive into another exciting day!</p>
+
+              <h2>One-on-One Meeting</h2>
+              <p>SADU conducted one-on-one meetings with RSOs on December 13 and 16, 2024.</p>
+
+              <h2>Blood Donation Drive 2024</h2>
+              <p>Partnering with Red Cross Philippines, we made a significant impact!</p>
+            </section>
+     
+
+      </nav>
 
             <!-- Hero Section with Smooth Background Slideshow -->
              <section class="hero-slider text-white text-center d-flex align-items-center justify-content-center position-relative p-5">
@@ -86,33 +120,32 @@
                 </div>
               </section>
       
-            <!--Home Section //Core Values -->
+            <!-- Home Section //Core Values -->
             <section id="home" class="py-5 bg-light text-center">
               <div class="container">
                 <div class="mb-5">
+                  <!-- Image Icon -->
+                  <img src="assets/tam.png" alt="Core Values Icon" class="section-icon" style="width: 100px; height: auto;">
                   <h2 class="fw-bold text-success">Core Values</h2>
                 </div>
 
                 <p class="lead">
-                <strong>SERVE</strong><br>
-                The Student Activities and Development Unit focuses on cultivating a community of leaders who are passionate, proactive, innovative, and dedicated to serving others.
-                With this in mind, every student leader is encouraged to embrace the belief that giving is more valuable than receiving—a principle that forms the foundation of leadership.
+                  <strong class="gold-text gold-text-large">SERVE</strong><br>
+                  The Student Activities and Development Unit focuses on cultivating a community of leaders who are passionate, proactive, innovative, and dedicated to serving others.
                 </p> 
 
-              <p class="lead mt-4"><br>
-                <strong>LEAD</strong><br>
-                The Student Activities and Development Unit strives to develop student leaders who are not only good followers but also confident decision-makers who take initiative in every situation they encounter. 
-                Through comprehensive training programs, student leaders are equipped with the skills needed to face real-life challenges and lead effectively.
-              </p> 
+                <p class="lead mt-4"><br>
+                  <strong class="gold-text gold-text-large">LEAD</strong><br>
+                  The Student Activities and Development Unit strives to develop student leaders who are confident decision-makers and proactive in every situation.
+                </p> 
 
-              <p class="lead mt-4"><br>
-                <strong>EXCEL</strong><br>
-                Excellence is a fundamental value that FEU Diliman student leaders are expected to embody in both their academic and personal lives. 
-                This commitment to excellence is a defining trait of every iTamaraw. The Student Activities and Development Unit supports this pursuit of excellence by offering a variety of training programs and developmental activities that prepare student leaders to succeed in every aspect of life.
-              </p> 
-              
+                <p class="lead mt-4"><br>
+                  <strong class="gold-text gold-text-large">EXCEL</strong><br>
+                  Excellence is a defining trait of every student leader. The unit provides training and developmental activities to support this pursuit of excellence.
+                </p> 
               </div>
             </section>
+
       
             <!--About Section *shar-->
             <section id="about" class="py-5 bg-light text-center">
@@ -130,15 +163,15 @@
                     experience.
                 </p> 
 
+                
               </div>
             </section>      
 
       <h1></h1>
-
       <!-- Featured Student Initiatives Section -->
-<section id="initiatives" class="py-5 bg-light" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+<section id="initiatives" class="py-5 bg-light"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
   <div class="container">
-    <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-out-cubic">
+    <div class="text-center mb-5"  data-aos="fade-down" data-aos-duration="1200" data-aos-easing="ease-out-cubic">
       <i class="bi bi-stars section-icon text-success"></i>
       <h2 class="fw-bold text-success">Featured Student Initiatives</h2>
       <p class="text-muted">A glimpse into the impactful programs and events led by FEU Diliman students and organizations.</p>
@@ -146,71 +179,85 @@
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
       <!-- Card 1 -->
-      <div class="col" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
-        <div class="card h-100 shadow-sm">
-          <img src="pic1.jpg" class="card-img-top" alt="BINHI 2025">
-          <div class="card-body">
-            <!-- ADDED BADGE for Program -->
-            <span class="badge bg-success mb-2">Program</span>
-            <h5 class="card-title fw-bold">𝐁𝐈𝐍𝐇𝐈 𝟐𝟎𝟐𝟓 – Cultivating the Leaders for the FEUTURE</h5>
-            <p class="card-text text-muted">
-              BINHI 2025 is now in full swing at the FEU Tech Gymnasium!
-              This prestigious leadership congress brings together dynamic and passionate student leaders.
-              #FEUDiliman #BINHI2025 #TSCC
-            </p>
-          </div>
-        </div>
-      </div>
+<div class="col" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+  <div class="card h-100 shadow-sm">
+    <img src="pic1.jpg" class="card-img-top" alt="BINHI 2025">
+    <div class="card-body">
+      <!-- ADDED BADGE for Program -->
+      <span class="badge bg-success mb-2">Program</span>
+      <h5 class="card-title fw-bold">𝐁𝐈𝐍𝐇𝐈 𝟐𝟎𝟐𝟓 – Cultivating the Leaders for the FEUTURE</h5>
+      <p class="card-text text-muted">
+        BINHI 2025 is now in full swing at the FEU Tech Gymnasium!
+      </p>
 
-      <!-- Card 2 -->
-      <div class="col" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
-        <div class="card h-100 shadow-sm">
-          <img src="pic2.jpg" class="card-img-top" alt="Handog KKK: Day 2">
-          <div class="card-body">
-            <!-- ADDED BADGE for Event -->
-            <span class="badge badge-yellow mb-2">Event</span>
-            <h5 class="card-title fw-bold">𝐇𝐚𝐧𝐝𝐨𝐠 𝐊𝐊𝐊: 𝐃𝐚𝐲 𝟐</h5>
-            <p class="card-text text-muted">
-              The energy is unstoppable as we dive into another exciting day of learning, growth, and inspiration!
-              #FEUDiliman #TSCC #HandogKKK
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
-        <div class="card h-100 shadow-sm">
-          <img src="pic3.jpg" class="card-img-top" alt="One-on-One Meeting">
-          <div class="card-body">
-            <!-- ADDED BADGE for Program -->
-            <span class="badge bg-success mb-2">Program</span>
-            <h5 class="card-title fw-bold">One-on-One Meeting</h5>
-            <p class="card-text text-muted">
-              SADU conducted one-on-one meetings with RSOs on December 13 and 16, 2024, in Room H415 of the New Building.
-              #OneOnOneMeeting #TSCC #FEUDiliman
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
-        <div class="card h-100 shadow-sm">
-          <img src="pic4.jpg" class="card-img-top" alt="Blood Donation Drive">
-          <div class="card-body">
-            <!-- ADDED BADGE for Event -->
-            <span class="badge badge-yellow mb-2">Event</span>
-            <h5 class="card-title fw-bold">Blood Donation Drive 2024</h5>
-            <p class="card-text text-muted">
-              Partnering with Red Cross Philippines, we made a significant impact. Relive the highlights in our photo compilation!
-              #BloodDonationDrive2024 #TSCC #FEUDiliman
-            </p>
-          </div>
-        </div>
+      <!-- Centered Learn More button -->
+      <div class="text-center mt-4">
+        <a href="https://web.facebook.com/share/p/12GEPwTwRgT/" class="btn btn-gold">Learn More</a>
       </div>
     </div>
   </div>
+</div>
+
+
+      <!-- Card 2 -->
+<div class="col" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+  <div class="card h-100 shadow-sm">
+    <img src="pic2.jpg" class="card-img-top" alt="Handog KKK: Day 2">
+    <div class="card-body">
+      <!-- ADDED BADGE for Event -->
+      <span class="badge badge-yellow mb-2">Event</span>
+      <h5 class="card-title fw-bold">𝐇𝐚𝐧𝐝𝐨𝐠 𝐊𝐊𝐊: 𝐃𝐚𝐲 𝟐</h5>
+      <p class="card-text text-muted">
+        The energy is unstoppable as we dive into another exciting day of learning, growth, and inspiration!
+      </p>
+
+      <!--Centered Learn More button with link-->
+      <div class="text-center mt-4">
+        <a href="https://web.facebook.com/share/p/1ATodbGt3W/" class="btn btn-gold">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Card 3 -->
+<div class="col" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+  <div class="card h-100 shadow-sm">
+    <img src="pic3.jpg" class="card-img-top" alt="One-on-One Meeting">
+    <div class="card-body">
+      <!-- ADDED BADGE for Program -->
+      <span class="badge bg-success mb-2">Program</span>
+      <h5 class="card-title fw-bold">One-on-One Meeting</h5>
+      <p class="card-text text-muted">
+        SADU conducted one-on-one meetings with RSOs on December 13 and 16, 2024, in Room H415 of the New Building.
+      </p>
+
+      <!-- Centered Learn More button with link -->
+      <div class="text-center mt-4">
+        <a href="https://web.facebook.com/share/p/15rvbiBcfJ/" class="btn btn-gold">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Card 4 -->
+<div class="col" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+  <div class="card h-100 shadow-sm">
+    <img src="pic4.jpg" class="card-img-top" alt="Blood Donation Drive">
+    <div class="card-body">
+      <!-- ADDED BADGE for Event -->
+      <span class="badge badge-yellow mb-2">Event</span>
+      <h5 class="card-title fw-bold">Blood Donation Drive 2024</h5>
+      <p class="card-text text-muted">
+        Partnering with Red Cross Philippines, we made a significant impact. Relive the highlights in our photo compilation!
+      </p>
+
+      <!--Centered Learn More button with link-->
+      <div class="text-center mt-4">
+        <a href="https://web.facebook.com/share/p/18qpchUNgN/" class="btn btn-gold">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 
 <!-- Organizations Section -->
@@ -331,7 +378,6 @@
 </section>
 
 
-
 <!-- Contact Us Section -->
 <section id="contact" class="py-5 bg-light">
   <div class="container">
@@ -339,7 +385,9 @@
     <div class="text-center mb-5">
       <i class="bi bi-envelope-fill section-icon text-success"></i>
       <h2 class="fw-bold text-success">Contact Us</h2>
-      <p class="text-muted">We'd love to hear from you! If you have any questions or need further information, feel free to reach out.</p>
+      <br>
+      <img src="associates.png" class="img-fluid" height="20%" width="30%">
+      <p class="text-muted"><br>We'd love to hear from you! If you have any questions or need further information, feel free to reach out.</p>
     </div>
 
     <!-- Contact Form -->
@@ -408,6 +456,7 @@
   </div>
 </section>
 
+
 <!-- Footer -->
 <footer class="footer-dark-green text-white text-center py-3 mt-5">
   <div class="container">
@@ -441,7 +490,91 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <!-- AOS JS Initialization -->
 <script>
-  AOS.init(); 
+  AOS.init();  // Initialize AOS
+</script>
+
+<!-- Card modal script (runs after DOM is loaded) -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const openDetailsBtn = document.getElementById('openDetailsBtn');
+    openDetailsBtn.addEventListener('click', function () {
+      const binhiModal = bootstrap.Modal.getInstance(document.getElementById('binhiModal'));
+      binhiModal.hide();
+
+      const binhiDetailsModal = new bootstrap.Modal(document.getElementById('binhiDetailsModal'));
+      binhiDetailsModal.show();
+    });
+  });
+</script>
+
+<script>
+// Main search function
+function searchPage() {
+  const query = document.getElementById("bar").value.toLowerCase();
+  const content = document.querySelectorAll("#content h2, #content p");
+  const resultContainer = document.getElementById("search-results");
+
+  resultContainer.innerHTML = "";
+  clearHighlights(content);
+
+  if (query === "") return;
+
+  let found = false;
+
+  content.forEach((item) => {
+    if (item.textContent.toLowerCase().includes(query)) {
+      found = true;
+
+      highlightMatches(item, query);
+
+      const resultItem = document.createElement("div");
+      resultItem.className = "result-item";
+      resultItem.innerHTML = item.outerHTML;
+
+      resultItem.onclick = () => {
+        showContent(item);
+        closeSearchModal();
+      };
+
+      resultContainer.appendChild(resultItem);
+    }
+  });
+
+  if (!found) {
+    resultContainer.innerHTML = "<p>No results found.</p>";
+  }
+
+  const searchModal = new bootstrap.Modal(document.getElementById("searchModal"));
+  searchModal.show();
+}
+
+function closeSearchModal() {
+  const searchModal = bootstrap.Modal.getInstance(document.getElementById("searchModal"));
+  if (searchModal) searchModal.hide();
+
+  document.querySelectorAll(".modal-backdrop").forEach(backdrop => backdrop.remove());
+  document.body.classList.remove("modal-open");
+}
+
+function highlightMatches(element, query) {
+  const regex = new RegExp(`(${query})`, "gi");
+  element.innerHTML = element.textContent.replace(regex, '<span class="highlight">$1</span>');
+}
+
+function clearHighlights(elements) {
+  elements.forEach((item) => {
+    item.innerHTML = item.textContent;
+  });
+}
+
+function showContent(element) {
+  const contentDisplay = document.getElementById("content-display");
+
+  const clone = element.cloneNode(true);
+  contentDisplay.appendChild(clone);
+
+  clone.scrollIntoView({ behavior: "smooth", block: "center" });
+}
 </script>
 
 </body>

@@ -45,7 +45,7 @@ body {
 }
 
 #bar {
-    margin-right: 0.75rem; /* Minove ko yung search button ng onti :D - Sharlene */
+    margin-right: 0.75rem; /* Minove ko yung search button ng onti 😃 - Sharlene */
   }
 
   /*FEU DILIMAN Text - shar */
@@ -99,6 +99,30 @@ body {
     padding: 2rem;
 }
 
+/*HOMIE*/
+#home {
+    padding: 60px 0;
+    background-color: #fdfffe !important;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 2.5rem;
+    color: #2d2d2d;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+
 /*Hero Section - shar*/
 section.text-center.p-5 {
     color: white !important;
@@ -108,8 +132,6 @@ section.text-center.p-5 {
     justify-content: center;
     flex-direction: column;
     text-shadow: 2px 2px 8px rgba(48, 48, 48, 0.5);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(16, 19, 35, 0.7)), 
-    url('hero.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
@@ -145,6 +167,142 @@ section.text-center.p-5 {
     margin: 0 auto;
     font-weight: 500;
 }
+
+/* CHANGED TODAY. */
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply animation to hero content */
+  .hero .container {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .section-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #achievements {
+    background-color: #fdfffe !important;
+  }
+
+  #achievements h2 {
+    font-size: 2.5rem;
+    color: #2d2d2d;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#achievements p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 500;
+
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer {
+    background-color: #175926;
+    width: 100%;
+  }
+
+  .hero-slider {
+    position: relative;
+    height: 500px; /* Adjust this height as needed */
+    overflow: hidden;
+  }
+  
+  .hero-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeSlide 15s infinite;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .hero-slider .slide:nth-child(1) {
+    background-image: url('hero.jpg'); /* replace with your path */
+    animation-delay: 0s;
+  }
+  .hero-slider .slide:nth-child(2) {
+    background-image: url('hero2.jpg');
+    animation-delay: 5s;
+  }
+  .hero-slider .slide:nth-child(3) {
+    background-image: url('hero3.jpg');
+    animation-delay: 10s;
+  }
+  
+  @keyframes fadeSlide {
+    0%, 100% {
+      opacity: 0;
+    }
+    10%, 30% {
+      opacity: 1;
+    }
+    40%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  .hero-slider .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(16, 19, 35, 0.7));
+    z-index: 1;
+  }
+  
+  .hero-slider .container {
+    z-index: 2;
+    position: relative;
+  }
+  
+
 
 @media(max-width: 1500px) {
     .navbar-nav {

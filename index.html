@@ -493,19 +493,6 @@
   AOS.init();  // Initialize AOS
 </script>
 
-<!-- Card modal script (runs after DOM is loaded) -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const openDetailsBtn = document.getElementById('openDetailsBtn');
-    openDetailsBtn.addEventListener('click', function () {
-      const binhiModal = bootstrap.Modal.getInstance(document.getElementById('binhiModal'));
-      binhiModal.hide();
-
-      const binhiDetailsModal = new bootstrap.Modal(document.getElementById('binhiDetailsModal'));
-      binhiDetailsModal.show();
-    });
-  });
-</script>
         
 </body>
 

@@ -62,49 +62,6 @@ body {
     align-items: center;
 }
 
-/*search button*/
-#search {
-    margin-left: 0.5rem;
-    background-color: rgb(24, 80, 35);
-    color: rgb(135, 196, 123);
-    border-color: rgb(78, 167, 51);
-    border-width: 2px;
-}
-
-#search-container {
-    margin-left: 20%;
-}
-
-#search:hover {
-    color: rgb(208, 241, 208);
-}
-
-#search:active {
-    color: rgb(14, 39, 14);
-}
-
-.result-item {
-    padding: 10px;
-    margin-bottom: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .result-item:hover {
-    background-color: #f0f0f0;
-  }
-
-    content {
-    display: none;
-  }
-
-  .highlight {
-    background-color: yellow;
-    font-weight: bold;
-  }
-
-
 .card {
     display: flex;
     height: 90%;

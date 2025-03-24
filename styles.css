@@ -628,11 +628,15 @@ body, html {
   
   
   @media(max-width: 1500px) {
-      .navbar-nav {
-          margin-left: 1%;
-          
-      }
-  }
+    .navbar-nav {
+        font-size: 15px;
+    }
+
+    #search-container {
+      margin-left: 1%;
+    }
+}
+
   
   @media(max-width: 850px) {
       .card {

@@ -508,84 +508,79 @@
 </script>
 
 <script>
-// Main search function
-function searchPage() {
-  const query = document.getElementById("bar").value.toLowerCase();
-  const content = document.querySelectorAll("#content h2, #content p");
-  const resultContainer = document.getElementById("search-results");
+  // Main search function
+  function searchPage() {
+    const query = document.getElementById("bar").value.trim().toLowerCase();
+    const content = document.querySelectorAll("#content h2, #content p");
+    const resultContainer = document.getElementById("search-results");
 
-  resultContainer.innerHTML = "";
-  clearHighlights(content);
+    resultContainer.innerHTML = "";
+    clearHighlights(content);
 
-  if (query === "") return;
+    if (query === "") return;
 
-  let found = false;
+    let found = false;
 
-  content.forEach((item) => {
-    if (item.textContent.toLowerCase().includes(query)) {
-      found = true;
+    content.forEach((item) => {
+      const text = item.textContent.toLowerCase();
 
-      highlightMatches(item, query);
+      if (text.includes(query)) {
+        found = true;
 
-      const resultItem = document.createElement("div");
-      resultItem.className = "result-item";
-      resultItem.innerHTML = item.outerHTML;
+        highlightMatches(item, query);
 
-      resultItem.onclick = () => {
-        showContent(item);
-        closeSearchModal();
-      };
+        const resultItem = document.createElement("div");
+        resultItem.className = "result-item";
+        resultItem.innerHTML = item.outerHTML;
 
-      resultContainer.appendChild(resultItem);
+        resultItem.onclick = () => {
+          showContent(item);
+          closeSearchModal();
+        };
+
+        resultContainer.appendChild(resultItem);
+      }
+    });
+
+    if (!found) {
+      resultContainer.innerHTML = "<p>No results found.</p>";
     }
-  });
 
-  if (!found) {
-    resultContainer.innerHTML = "<p>No results found.</p>";
+    const searchModal = new bootstrap.Modal(document.getElementById("searchModal"));
+    searchModal.show();
   }
 
-  openSearchModal();
-}
+  function closeSearchModal() {
+    const modalEl = document.getElementById("searchModal");
+    const searchModal = bootstrap.Modal.getInstance(modalEl);
+    if (searchModal) searchModal.hide();
 
-// Open modal without backdrop
-function openSearchModal() {
-  const searchModal = new bootstrap.Modal(document.getElementById("searchModal"), {
-    backdrop: false, // Disable backdrop
-  });
-  searchModal.show();
-}
+    // Clean up any leftover modal backdrop and open class
+    document.querySelectorAll(".modal-backdrop").forEach((backdrop) => backdrop.remove());
+    document.body.classList.remove("modal-open");
+  }
 
-// Close modal and clean up backdrop
-function closeSearchModal() {
-  const searchModal = bootstrap.Modal.getInstance(document.getElementById("searchModal"));
-  if (searchModal) searchModal.hide();
+  function highlightMatches(element, query) {
+    const regex = new RegExp((${query}), "gi");
+    const originalText = element.textContent;
+    element.innerHTML = originalText.replace(regex, '<span class="highlight">$1</span>');
+  }
 
-  // Remove lingering backdrops and modal-open class
-  document.querySelectorAll(".modal-backdrop").forEach((backdrop) => backdrop.remove());
-  document.body.classList.remove("modal-open");
-}
+  function clearHighlights(elements) {
+    elements.forEach((item) => {
+      item.innerHTML = item.textContent;
+    });
+  }
 
-function highlightMatches(element, query) {
-  const regex = new RegExp((${query}), "gi");
-  element.innerHTML = element.textContent.replace(regex, '<span class="highlight">$1</span>');
-}
+  function showContent(element) {
+    const contentDisplay = document.getElementById("content-display");
+    contentDisplay.innerHTML = ""; // Clear previous content
 
-function clearHighlights(elements) {
-  elements.forEach((item) => {
-    item.innerHTML = item.textContent;
-  });
-}
-
-function showContent(element) {
-  const contentDisplay = document.getElementById("content-display");
-
-  contentDisplay.innerHTML = ""; // Clear previous content
-
-  const clone = element.cloneNode(true);
-  contentDisplay.appendChild(clone);
-
-  clone.scrollIntoView({ behavior: "smooth", block: "center" });
-    </script>
+    const clone = element.cloneNode(true);
+    contentDisplay.appendChild(clone);
+    clone.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+</script>
         
 </body>
 

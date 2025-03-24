@@ -639,6 +639,10 @@ body, html {
           width: 75%;
           margin-left: 13.5%;
       }
+
+      #search-container {
+      margin-left: 30%;
+    }
   }
   
   /* Mobile: up to 767px */

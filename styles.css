@@ -727,6 +727,21 @@ body, html {
     }
 }
 
+@media(max-width: 1024px) {
+    .navbar-nav {
+        margin-left: 0%;       
+    }
+
+   .nav-item {
+      margin-right: -1.5%;
+    }
+
+   #search-container {
+      margin-left: 1%;
+    }
+
+}
+
 @media(max-width: 850px) {
     .card {
         width: 75%;

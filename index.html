@@ -507,7 +507,8 @@
   });
 </script>
 
-<script>
+</script>
+You sent
 // Main search function
 function searchPage() {
   const query = document.getElementById("bar").value.toLowerCase();
@@ -544,20 +545,29 @@ function searchPage() {
     resultContainer.innerHTML = "<p>No results found.</p>";
   }
 
-  const searchModal = new bootstrap.Modal(document.getElementById("searchModal"));
+  openSearchModal();
+}
+
+// Open modal without backdrop
+function openSearchModal() {
+  const searchModal = new bootstrap.Modal(document.getElementById("searchModal"), {
+    backdrop: false, // Disable backdrop
+  });
   searchModal.show();
 }
 
+// Close modal and clean up backdrop
 function closeSearchModal() {
   const searchModal = bootstrap.Modal.getInstance(document.getElementById("searchModal"));
   if (searchModal) searchModal.hide();
 
-  document.querySelectorAll(".modal-backdrop").forEach(backdrop => backdrop.remove());
+  // Remove lingering backdrops and modal-open class
+  document.querySelectorAll(".modal-backdrop").forEach((backdrop) => backdrop.remove());
   document.body.classList.remove("modal-open");
 }
 
 function highlightMatches(element, query) {
-  const regex = new RegExp(`(${query})`, "gi");
+  const regex = new RegExp((${query}), "gi");
   element.innerHTML = element.textContent.replace(regex, '<span class="highlight">$1</span>');
 }
 
@@ -570,12 +580,12 @@ function clearHighlights(elements) {
 function showContent(element) {
   const contentDisplay = document.getElementById("content-display");
 
+  contentDisplay.innerHTML = ""; // Clear previous content
+
   const clone = element.cloneNode(true);
   contentDisplay.appendChild(clone);
 
   clone.scrollIntoView({ behavior: "smooth", block: "center" });
-}
-</script>
 
 </body>
 
